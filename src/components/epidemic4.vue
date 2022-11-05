@@ -1,0 +1,44 @@
+<template>
+  <Common 
+  imgTop="/images/疫情打卡4/imgTop.png"
+  imgButtom="/images/疫情打卡4/14-2.png"
+  title="疫情期间"
+  :isContain="true"
+  resource="数据来源：信息化办"
+  >
+  <ul v-if="Object.keys(data).length">
+    <li>这一学年</li>
+    <li>你坚持在We重邮小程序上打卡<span class="numBlueHighlight">349</span>次</li>
+    <li>扫码出校：<span class="numBlueHighlight">49</span>次</li>
+    <li>扫码入校：<span class="numBlueHighlight">49</span>次</li>
+    <li>其中，男生平均出校<span class="numBlueHighlight">49</span>次，</li>
+    <li>女生平均出校<span class="numBlueHighlight">69</span>次</li>
+    <li style="margin-top:10px">感谢您的配合</li>
+  </ul>
+  <ul v-else>
+        <li>由于某些原因您没有在We重邮小程序上打卡</li>
+        <li>扫码出校最多为 刘 同学，达403次</li>
+        <li>其中，男生平均出校57次，</li>
+        <li>女生平均出校77次</li>
+    </ul>
+  </Common>
+</template>
+
+<script setup>
+import { reactive } from "@vue/reactivity"
+import Common from "./common.vue"
+const data=reactive({a:1})
+</script>
+
+<style scoped>
+  ul{
+    list-style: none;
+    padding-bottom: 35px;
+    
+  }
+  li{
+    line-height: 3.5vh;
+    color: rgb(80, 80, 80);
+    text-align: start;
+  }
+</style>
