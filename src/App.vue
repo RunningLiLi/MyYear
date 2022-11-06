@@ -42,4 +42,7 @@ import Physical from "./components/physical14.vue";
 import Internetl from "./components/internet15.vue";
 import Dorm from "./components/dorm16.vue";
 import Forecast from "./components/forecast17.vue";
+// if(sessionStorage.token){
+//   location.href="http://10.20.97.131:8080/myterm/information"
+// }
 </script>

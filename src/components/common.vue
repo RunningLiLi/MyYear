@@ -30,9 +30,6 @@
 
 <script setup>
 const props = defineProps(["imgButtom", "imgTop", "title","isContain","resource"]);
-fetch("http://localhost:8080/myterm/information").
-then(res=>res.json()).
-then(console.log)
 </script>
 <style scoped>
 .titleImg{

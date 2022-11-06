@@ -13,6 +13,21 @@ export default defineConfig({
     }
   },
   server:{
-    // host:'10.20.91.254'
+    host:"127.0.0.1",
+    port:"5173",
+    proxy: {
+      "/api": {
+        target: "http://10.20.97.131:8080",
+        secure:false,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+      "/go": {
+        secure:false,
+        target: "https://ids.cqupt.edu.cn",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/go/, ""),
+      },
+    }
   }
 })

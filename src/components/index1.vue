@@ -9,7 +9,12 @@
 </template>
 
 <script setup>
-
+import request from "../request"
+  // request("http://127.0.0.1:5173/login/myterm/information",{})
+  fetch("/api/myterm/information")
+  .then(res=>res.text())
+  .then(console.log)
+  // window.location.href="https://ids.cqupt.edu.cn/authserver/login?service=http%3A%2F%2F10.20.97.131%3A8080%2Fidslogin"
 </script>
 
 <style scoped>

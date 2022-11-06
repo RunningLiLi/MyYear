@@ -20,6 +20,8 @@
 </template>
 
 <script setup>
+import request from "../request"
+// request("http://10.20.97.131:8080/api/myterm/information",{})
 </script>
 
 <style scoped>
