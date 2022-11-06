@@ -7,8 +7,8 @@
     resource="数据来源：教务处"
   >
     <ul>
-      <li v-if="true">你参加了<span class="blueHighlight" style="white-space:pre-wrap;">2021年一点资讯高校技术编程大赛(市级)</span>，
-          获得了<span class="numBlueHighlight">特等奖</span>
+      <li v-if="true">你参加了<span class="blueHighlight" style="white-space:pre-wrap;">{{ssmc}}({{ssdj}})</span>，
+          获得了<span class="numBlueHighlight">{{hjdj}}</span>
       </li>
       <li v-else>在2021-2022学年
       </li>
@@ -27,9 +27,9 @@
 </template>
 
 <script setup>
-import { reactive } from "@vue/reactivity";
 import Common from "../components/common.vue";
-const data = reactive({ a: 1 });
+import request from "../request"
+const {data:{ssmc,ssdj,hjdj}}=await  request("/myterm/competition",{})
 </script>
 
 <style scoped>

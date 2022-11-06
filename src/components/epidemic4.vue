@@ -8,11 +8,11 @@
   >
   <ul v-if="Object.keys(data).length">
     <li>这一学年</li>
-    <li>你坚持在We重邮小程序上打卡<span class="numBlueHighlight">349</span>次</li>
-    <li>扫码出校：<span class="numBlueHighlight">49</span>次</li>
-    <li>扫码入校：<span class="numBlueHighlight">49</span>次</li>
-    <li>其中，男生平均出校<span class="numBlueHighlight">49</span>次，</li>
-    <li>女生平均出校<span class="numBlueHighlight">69</span>次</li>
+    <li>你坚持在We重邮小程序上打卡<span class="numBlueHighlight">{{dkcs}}</span>次</li>
+    <li>扫码出校：<span class="numBlueHighlight">{{smcxcs}}</span>次</li>
+    <li>扫码入校：<span class="numBlueHighlight">{{smrxcs}}</span>次</li>
+    <li>其中，男生平均出校<span class="numBlueHighlight">58</span>次，</li>
+    <li>女生平均出校<span class="numBlueHighlight">85</span>次</li>
     <li style="margin-top:10px">感谢您的配合</li>
   </ul>
   <ul v-else>
@@ -25,9 +25,9 @@
 </template>
 
 <script setup>
-import { reactive } from "@vue/reactivity"
-import Common from "./common.vue"
-const data=reactive({a:1})
+import Common from "../components/common.vue";
+import request from "../request"
+const {data:{dkcs,smcxcs,smrxcs}}=await  request("/myterm/epidemic",{})
 </script>
 
 <style scoped>

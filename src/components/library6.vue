@@ -7,8 +7,8 @@
 
   >
     <ul v-if="1">
-      <li>你的纸质借书已还总量为<span class="numBlueHighlight">86</span>本，</li>
-      <li>高于<span class="numRedHighlight">99%</span>的同学，</li>
+      <li>你的纸质借书已还总量为<span class="numBlueHighlight">{{zjsl}}</span>本，</li>
+      <li>高于<span class="numRedHighlight">{{(jszb*100)}}%</span>的同学，</li>
       <li>
         其中，<span class="collageHighlight sizeHighlight">体育学院</span>平均借书量最高，
       </li>
@@ -48,9 +48,9 @@
 </template>
 
 <script setup>
-import { reactive } from "@vue/reactivity";
 import Common from "../components/common.vue";
-const data = reactive({ a: 1 });
+import request from "../request"
+const {data:{zjsl,jszb}}=await  request("/myterm/bookborrow",{})
 </script>
 
 <style scoped>

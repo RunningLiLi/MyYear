@@ -2,14 +2,16 @@
   <div class="container">
     <ul>
       <li>欢迎</li>
-      <li>xxx</li>
+      <li>{{data.data.xm}}</li>
       <li>同学开启你的成长档案</li>
     </ul>
   </div>
 </template>
 
 <script setup>
-
+import request from "../request"
+const data=await  request("/myterm/information",{})
+console.log(data)
 </script>
 <style scoped>
 .container{ 

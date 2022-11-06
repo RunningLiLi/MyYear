@@ -6,9 +6,9 @@
     resource="数据来源：学生处"
   >
     <ul v-if="true">
-      <li>你所在<span class="numBlueHighlight">宁静苑3舍 601</span></li>
+      <li>你所在<span class="numBlueHighlight">{{ssmc}}</span></li>
       <li>被评为<span class="numBlueHighlight">五星文明寝室</span></li>
-      <li>近一年宿舍用电<span class="numBlueHighlight">1890度</span></li>
+      <li>近一年宿舍用电<span class="numBlueHighlight">{{ssydzl}}</span></li>
       <li>全校女生寝室平均用电<span class="numBlueHighlight">1000度</span></li>
       <li>全校男生寝室平均用电<span class="numBlueHighlight">3243度</span></li>
       <li>节约用电，人人有责</li>
@@ -32,7 +32,8 @@
 <script setup>
 import { reactive } from "@vue/reactivity";
 import Common from "./common.vue";
-const data = reactive({ a: 1 });
+import request from "../request"
+const {data:{ssmc,ssdm,ssydzl}}=await  request("/myterm/electricity",{})
 </script>
 
 <style scoped>

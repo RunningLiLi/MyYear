@@ -8,10 +8,10 @@
   >
     <ul>
       <li>这一学年</li>
-      <li>学时最长的是：<span class="blueHighlight sizeHighlight">通信原理A</span></li>
-      <li>学时最短的是：<span class="blueHighlight sizeHighlight">体育（俱乐部）</span></li>
-      <li style="margin-top:50px"><span class="blueHighlight sizeHighlight">于秀兰</span>
-        老师的<span class="blueHighlight sizeHighlight">《通信原理A》</span>课程</li>
+      <li>学时最长的是：<span class="blueHighlight sizeHighlight">{{zcxskc}}</span></li>
+      <li>学时最短的是：<span class="blueHighlight sizeHighlight">{{zdxskc}}</span></li>
+      <li style="margin-top:50px"><span class="blueHighlight sizeHighlight">{{dkzgcjjs}}</span>
+        老师的<span class="blueHighlight sizeHighlight">{{dkzgcjkcm}}</span>课程</li>
       <li>你得分<span class="numRedHighlight underline">98</span>，是你这学年最高分的课程</li>
     </ul>
   </Common>
@@ -20,7 +20,8 @@
 <script setup>
 import { reactive } from "@vue/reactivity";
 import Common from "./common.vue";
-const data = reactive({ a: 1 });
+import request from "../request"
+const {data:{zcxskc,zdxskc,dkzgcjjs,dkzgcjkcm,zgjdkc}}=await  request("/myterm/score",{})
 </script>
 
 <style scoped>

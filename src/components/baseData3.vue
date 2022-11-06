@@ -5,15 +5,15 @@
         <div class="textContainer">
             <ul class="dataList">
                 <li>在<span class="numRedHighlight">2021-2022</span>学年</li>
-                <li>你在<span class="collageHighlight" style="color:yellow">计算机学院精英班04012102</span>班</li>
-                <li>有<span class="numHighlight" style="color:yellow">26</span>个小伙伴和你一起</li>
-                <li>导员是<span style="color:yellow">罗娜</span></li>
-                <li>全校和你同一天生日的有<span style="color:yellow" class="numHighlight">8</span>人</li>
+                <li>你在<span class="collageHighlight" style="color:yellow">{{xy}}{{bj}}</span>班</li>
+                <li>有<span class="numHighlight" style="color:yellow">{{bjrs}}</span>个小伙伴和你一起</li>
+                <li>导员是<span style="color:yellow">{{fdy}}</span></li>
+                <li>全校和你同一天生日的有<span style="color:yellow" class="numHighlight">{{tytr}}</span>人</li>
             </ul>
         </div>
         <div class="idContainer">
             <h5>ID</h5><br>
-            <span>2021211836</span>
+            <span>{{xh}}</span>
         </div>
     </div>
   </div>
@@ -21,7 +21,7 @@
 
 <script setup>
 import request from "../request"
-// request("http://10.20.97.131:8080/api/myterm/information",{})
+const {data:{xy,bj,bjrs,fdy,tytr,xh}}=await  request("/myterm/information",{})
 </script>
 
 <style scoped>

@@ -6,13 +6,13 @@
     resource="数据来源：财务处"
   >
     <ul v-if="true">
-      <li>你的一卡通累计消费<span class="numBlueHighlight">4863.47</span>元，</li>
-      <li>超过了<span class="numRedHighlight">99%</span>的同学，</li>
-      <li>其中，<span class="numBlueHighlight">3月</span>花的最多，为<span class="numBlueHighlight">1060.00</span>元</li>
-      <li>光顾最多的食堂是：<span class="blueHighlight sizeHighlight">千禧鹤食堂</span></li>
-      <li>你用一卡通早餐消费次数为：<span class="numBlueHighlight">332</span>次</li>
+      <li>你的一卡通累计消费<span class="numBlueHighlight">{{skzje}}</span>元，</li>
+      <li>超过了<span class="numRedHighlight">{{skxfzb}}%</span>的同学，</li>
+      <li>其中，<span class="numBlueHighlight">{{skjezgy}}月</span>花的最多，为<span class="numBlueHighlight">{{dyskzje}}</span>元</li>
+      <li>光顾最多的食堂是：<span class="blueHighlight sizeHighlight">{{skzdst}}</span></li>
+      <li>你用一卡通早餐消费次数为：<span class="numBlueHighlight">{{zcxfcs}}</span>次</li>
       <li>你最早刷卡消费时间是：
-        <span class="numBlueHighlight">2022-03-10 06:03:01</span>
+        <span class="numBlueHighlight">{{zzskxfsj}}</span>
       </li>
       <li>美好的一天，从早餐开始</li>
     </ul>
@@ -30,7 +30,8 @@
 <script setup>
 import { reactive } from "@vue/reactivity";
 import Common from "./common.vue";
-const data = reactive({ a: 1 });
+import request from "../request"
+const {data:{skzje,skxfzb,skjezgy,dyskzje,skzdst,zcxfcs,zzskxfsj}}=await  request("/myterm/canteen",{})
 </script>
 
 <style scoped>

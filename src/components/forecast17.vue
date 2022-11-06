@@ -21,7 +21,8 @@
 </template>
 
 <script setup>
-
+import request from "../request"
+const {data}=await  request("/myterm/predict",{})
 </script>
 
 <style scoped>

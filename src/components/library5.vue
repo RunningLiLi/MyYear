@@ -7,13 +7,13 @@
   >
     <ul>
       <li>在<span class="numBlueHighlight">2021-2022</span>学年期间</li>
-      <li>共计人脸识别进入图书馆：<span class="numBlueHighlight">227</span>次</li>
+      <li>共计人脸识别进入图书馆：<span class="numBlueHighlight">{{rgcs}}</span>次</li>
       <li>
         这学期第一次人脸识别进入图书馆：<span class="numBlueHighlight"
-          >2021-09-11 09:56</span
+          >{{rgsj}}</span
         >
       </li>
-      <li>偏爱进馆时间是：<span class="sizeHighlight">下午</span></li>
+      <li>偏爱进馆时间是：<span class="sizeHighlight">{{pargsj}}</span></li>
       <li>本学期，人均进出图书馆次数中：</li>
       <li><span class="collageHighlight sizeHighlight">体育学院</span>最多，</li>
       <li>
@@ -27,9 +27,9 @@
 </template>
 
 <script setup>
-import { reactive } from "@vue/reactivity";
 import Common from "../components/common.vue";
-const data = reactive({ a: 1 });
+import request from "../request"
+const {data:{rgcs,rgsj,pargsj}}=await  request("/myterm/face",{})
 </script>
 
 <style scoped>
