@@ -34,7 +34,7 @@
 <script setup>
 import Common from "../components/common.vue";
 import request from "../request"
-const {data:{lx,xmmc,xq,xm,xmjb}}=await  request("/myterm/research",{})
+const {data:{lx,xmmc,xq,xm,xmjb}}=await request("/myterm/research",{})
 </script>
 
 <style scoped>
