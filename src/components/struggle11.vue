@@ -9,10 +9,10 @@
       <li>据不完全统计</li>
       <li> 这一学年，你上过<span class="numBlueHighlight">{{bxkms+xxkms}}</span>门课，</li>
       <li>共获得<span class="numBlueHighlight">{{bxkxf+xxkxf}}</span>学分，其中</li>
-      <li>必修课<span class="numBlueHighlight">{{xxkms}}</span>门，共
+      <li>必修课<span class="numBlueHighlight">{{bxkms}}</span>门，共
       <span class="numBlueHighlight">{{bxkxf}}</span>学分</li>
       <li>选修课<span class="numBlueHighlight">{{xxkms}}</span>门，共
-      <span class="numBlueHighlight">{{bxkxf}}</span>学分</li>
+      <span class="numBlueHighlight">{{xxkxf}}</span>学分</li>
     </ul>
   </Common>
 </template>
