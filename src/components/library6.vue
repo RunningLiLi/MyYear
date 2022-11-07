@@ -8,7 +8,7 @@
   >
     <ul v-if="zjsl">
       <li>你的纸质借书已还总量为<span class="numBlueHighlight">{{zjsl}}</span>本，</li>
-      <li>高于<span class="numRedHighlight">{{(jszb*100)}}%</span>的同学，</li>
+      <li>高于<span class="numRedHighlight">{{(jszb*100).toFixed(0)}}%</span>的同学，</li>
       <li>
         其中，<span class="collageHighlight sizeHighlight">体育学院</span>平均借书量最高，
       </li>
@@ -51,6 +51,7 @@
 import Common from "../components/common.vue";
 import request from "../request"
 const {data:{zjsl=0,jszb=0}=0}=await  request("/myterm/bookborrow",{})
+
 </script>
 
 <style scoped>
