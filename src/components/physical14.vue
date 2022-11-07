@@ -5,7 +5,7 @@
     title="你的体能"
     resource="数据来源：体育学院"
   >
-    <ul v-if="dlzcs">
+    <ul v-if="dlzsc">
       <li>从<span class="numBlueHighlight">2021年9月</span>
       至<span class="numBlueHighlight">2022年7月</span>，</li>
       <li>你参加<span class="numBlueHighlight">{{dlzcs}}次</span>体育锻炼，</li>
@@ -29,7 +29,8 @@
 import { reactive } from "@vue/reactivity";
 import Common from "./common.vue";
 import request from "../request"
-const {data:{zxhydc2,zxhydc1,dlcszdycs,dlcszdy,dlzcs}}=await  request("/myterm/exercise",{})
+const {data:{zxhydc2,zxhydc1,dlcszdycs,dlcszdy,dlzsc,dlzcs}}=await  request("/myterm/exercise",{})
+
 </script>
 
 <style scoped>
