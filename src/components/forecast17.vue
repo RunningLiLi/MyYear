@@ -5,7 +5,9 @@
             <div class="triangle2"></div>
         </div>
         <ul>
-            <li>很抱歉，你没有这次的学业预警数据。</li>
+        </ul>
+        <ul>
+            <li>抱歉，你没有这次的学业预警数据。</li>
             <li>根据学生数据现状，仅对部分学院学生做了学业预警应用，</li>
             <li>本次学业预警是根据往届学长学姐的消费和学业等相关数据建模，</li>
             <li>结合学生本人这一学年相关数据，</li>
@@ -13,7 +15,6 @@
             <li>根据往届学长学姐的消费和学业等相关数据建模，</li>
             <li>结合你自身这一学年的数据，</li>
             <li>运用机器学习算法，预测您本学期的学业情况，</li>
-            <li>只要复习早，挂科风险小</li>
         </ul>
         <span class="tips">(本数据处理结果只做参考作用，不做任何结论。)</span>
       </div>
@@ -57,7 +58,7 @@ const {data}=await  request("/myterm/predict",{})
         font-size: 1.8vh;
         width: 100%;
         left: 50%;
-        bottom: 20px;
+        bottom: 10px;
         transform: translateX(-50%);
     }
     li{

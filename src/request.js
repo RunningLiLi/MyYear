@@ -2,12 +2,19 @@ export default function (path, header) {
 //   if(!sessionStorage.token){
 //     location.href="http://10.20.97.131:8080/myterm/information"
 //   }
-  const baseUrl="http://10.20.97.131:8080";
+  const token=window.location.search.replace("?token=","")
+  // if(!token){
+  //   // top.location='https://ids.cqupt.edu.cn/authserver/login?service=http%3A%2F%2F10.20.97.131%3A8080%2Fidslogin'; 
+  //   // self.location='https://ids.cqupt.edu.cn/authserver/login?service=http%3A%2F%2F10.20.97.131%3A8080%2Fidslogin'; 
+  //   // window.location="https://ids.cqupt.edu.cn/authserver/login?service=http%3A%2F%2F10.20.97.131%3A8080%2Fidslogin";
+  //   fetch("/go/authserver/login?service=http%3A%2F%2F10.20.97.131%3A8080%2Fidslogin")
+  // }
+  const baseUrl="http://localhost:8080";
   return fetch(baseUrl+path, {
+    method:"GET",
     headers: {
-      Authorization:"eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjQxNzNlZmIxLTBiNTItNGIxNC04MjIzLTk4YzJjMTIxYmFkMSJ9.Ot-a0Mqi2ejfJa-fk-X3UGP5CgWXV61WZKQFMZ8k3IsByyUzvxutM0A2VgYF_4eD2-yY_tbc63nuK54ndZn1ug"
+      Authorization:token
     },
   })
     .then((res) => res.json())
-    .then(res=>res);
 }

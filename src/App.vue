@@ -1,4 +1,5 @@
 <template>
+  <Suspense>
   <swiper :direction="'vertical'" :modules="modules" class="mySwiper">
     <swiper-slide><index1 /></swiper-slide>
     <swiper-slide><Transiton /></swiper-slide>
@@ -10,7 +11,7 @@
     ><swiper-slide><Science /></swiper-slide>
     <swiper-slide><Harvest /></swiper-slide>
     <swiper-slide><Struggle1 /></swiper-slide>
-    <swiper-slide><Struggle2 /></swiper-slide>
+    <swiper-slide><Struggle2 :data="data"/></swiper-slide>
     <swiper-slide><Struggle3 /></swiper-slide>
     <swiper-slide><Consume /></swiper-slide>
     <swiper-slide><Physical/></swiper-slide>
@@ -18,6 +19,7 @@
     <swiper-slide><Dorm/></swiper-slide>
     <swiper-slide><Forecast/></swiper-slide>
   </swiper>
+</Suspense>
 </template>
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -42,7 +44,4 @@ import Physical from "./components/physical14.vue";
 import Internetl from "./components/internet15.vue";
 import Dorm from "./components/dorm16.vue";
 import Forecast from "./components/forecast17.vue";
-// if(sessionStorage.token){
-//   location.href="http://10.20.97.131:8080/myterm/information"
-// }
 </script>

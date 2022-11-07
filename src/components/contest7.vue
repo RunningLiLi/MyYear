@@ -7,10 +7,10 @@
     resource="数据来源：教务处"
   >
     <ul>
-      <li v-if="true">你参加了<span class="blueHighlight" style="white-space:pre-wrap;">{{ssmc}}({{ssdj}})</span>，
+      <li v-if="ssmc">你参加了<span class="blueHighlight" style="white-space:pre-wrap;">{{ssmc}}({{ssdj}})</span>，
           获得了<span class="numBlueHighlight">{{hjdj}}</span>
       </li>
-      <li v-else>在2021-2022学年
+      <li v-else>在<span class="numBlueHighlight">2021-2022</span>学年
       </li>
       <li>
         我校学生科技文体竞赛省部级以上获奖人次为

@@ -7,9 +7,9 @@
     isContain="1"
   >
     <ul>
-      <li>你共上网<span class="numBlueHighlight">{{swzsc}}</span>小时</li>
-      <li>其中PC端<span class="numBlueHighlight">{{yx}}</span>小时</li>
-      <li>移动端<span class="numBlueHighlight">{{wx}}</span>小时</li>
+      <li v-if="swzsc">你共上网<span class="numBlueHighlight">{{swzsc}}</span>小时</li>
+      <li v-if="yx">其中PC端<span class="numBlueHighlight">{{yx}}</span>小时</li>
+      <li v-if="wx">移动端<span class="numBlueHighlight">{{wx}}</span>小时</li>
       <li>在各学院人均上网时长中，</li>
       <li><span class="collageHighlight sizeHighlight">国际学院</span>是第一</li>
       <li>其次是<span class="collageHighlight sizeHighlight">计算机科学与技术学院</span>，</li>
