@@ -11,7 +11,6 @@
 <script setup>
 import request from "../request"
 const data=await  request("/myterm/information",{})
-console.log(data)
 </script>
 <style scoped>
 .container{ 

@@ -12,8 +12,11 @@
           <span v-for="(item,key) in zw" :key="key" class="collageHighlight blueHighlight sizeHighlight">{{item}},</span>
         </li>
     </ul>
-    <ul v-else></ul>
-    
+    <ul v-else>
+      <li>在这一学年，</li>
+      <li>学生干部中，女生占<span class="numBlueHighlight">35%</span></li>
+      <li>男生占<span class="numBlueHighlight">65%</span></li>
+    </ul>
     <ul v-if="ry[0]">
         <li>&lt;荣誉表彰&gt;</li>
         <li>获得了</li>
@@ -26,7 +29,10 @@
          </span>等荣誉表彰
         </li>
     </ul>
-    <ul v-else></ul>
+    <ul v-else>
+      <li>奖助学金中，男生占<span class="numBlueHighlight">60%</span></li>
+      <li>女生占<span class="numBlueHighlight">40%</span></li>
+    </ul>
     
     <ul v-if="jz[0]">
         <li>&lt;奖助学金&gt;</li>
@@ -38,7 +44,10 @@
           class="collageHighlight blueHighlight sizeHighlight">{{item}}</span>
         </li>
     </ul>
-    <ul v-else></ul>
+    <ul v-else>
+      <li>学生干部中，女生占<span class="numBlueHighlight">35%</span></li>
+      <li>男生占<span class="numBlueHighlight">65%</span></li>
+    </ul>
   </Common>
 </template>
 

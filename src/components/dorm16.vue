@@ -5,7 +5,7 @@
     title="你与寝室"
     resource="数据来源：学生处"
   >
-    <ul v-if="true">
+    <ul v-if="ssmc">
       <li>你所在<span class="numBlueHighlight">{{ssmc}}</span></li>
       <li>被评为<span class="numBlueHighlight">五星文明寝室</span></li>
       <li>近一年宿舍用电<span class="numBlueHighlight">{{ssydzl}}</span></li>
@@ -33,7 +33,7 @@
 import { reactive } from "@vue/reactivity";
 import Common from "./common.vue";
 import request from "../request"
-const {data:{ssmc,ssdm,ssydzl}}=await  request("/myterm/electricity",{})
+const {data:{ssmc=0,ssdm,ssydzl}=0}=await  request("/myterm/electricity",{})
 </script>
 
 <style scoped>

@@ -8,8 +8,8 @@
     <ul>
       <li>据不完全统计</li>
       <li> 这一学年，你上过<span class="numBlueHighlight">{{bxkms+xxkms}}</span>门课，</li>
-      <li>共获得<span class="numBlueHighlight">{{bxkxf+c}}</span>学分，其中</li>
-      <li>必修课<span class="numBlueHighlight">{{bxkms}}</span>门，共
+      <li>共获得<span class="numBlueHighlight">{{bxkxf+xxkxf}}</span>学分，其中</li>
+      <li>必修课<span class="numBlueHighlight">{{xxkms}}</span>门，共
       <span class="numBlueHighlight">{{bxkxf}}</span>学分</li>
       <li>选修课<span class="numBlueHighlight">{{xxkms}}</span>门，共
       <span class="numBlueHighlight">{{bxkxf}}</span>学分</li>
@@ -21,7 +21,7 @@
 import { reactive } from "@vue/reactivity";
 import Common from "./common.vue";
 import request from "../request"
-const {data:{xxkcs,sjkms,rxkms,zkcs,zkcxf,bxkms,xxkms,xxkxf,qtkcs,qtkxf}}=await  request("/myterm/study",{})
+const {data:{xxkcs,sjkms,rxkms,zkcs,zkcxf,bxkxf,bxkms,xxkms,xxkxf,qtkcs,qtkxf}}=await  request("/myterm/study",{})
 </script>
 
 <style scoped>

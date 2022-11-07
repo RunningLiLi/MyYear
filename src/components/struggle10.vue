@@ -12,7 +12,7 @@
       <li>学时最短的是：<span class="blueHighlight sizeHighlight">{{zdxskc}}</span></li>
       <li style="margin-top:50px"><span class="blueHighlight sizeHighlight">{{dkzgcjjs}}</span>
         老师的<span class="blueHighlight sizeHighlight">{{dkzgcjkcm}}</span>课程</li>
-      <li>你得分<span class="numRedHighlight underline">98</span>，是你这学年最高分的课程</li>
+      <li>你得分<span class="numRedHighlight underline">{{dkzgcjxf}}</span>，是你这学年最高分的课程</li>
     </ul>
   </Common>
 </template>
@@ -21,7 +21,7 @@
 import { reactive } from "@vue/reactivity";
 import Common from "./common.vue";
 import request from "../request"
-const {data:{zcxskc,zdxskc,dkzgcjjs,dkzgcjkcm,zgjdkc}}=await  request("/myterm/score",{})
+const {data:{zcxskc,zdxskc,dkzgcjjs,dkzgcjkcm,dkzgcjxf}}=await  request("/myterm/score",{})
 </script>
 
 <style scoped>

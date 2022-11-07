@@ -23,7 +23,6 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
       "/go": {
-        secure:false,
         target: "https://ids.cqupt.edu.cn",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/go/, ""),

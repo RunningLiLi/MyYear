@@ -6,7 +6,7 @@
   :isContain="true"
   resource="数据来源：信息化办"
   >
-  <ul v-if="Object.keys(data).length">
+  <ul v-if="dkcs">
     <li>这一学年</li>
     <li>你坚持在We重邮小程序上打卡<span class="numBlueHighlight">{{dkcs}}</span>次</li>
     <li>扫码出校：<span class="numBlueHighlight">{{smcxcs}}</span>次</li>
@@ -17,9 +17,9 @@
   </ul>
   <ul v-else>
         <li>由于某些原因您没有在We重邮小程序上打卡</li>
-        <li>扫码出校最多为 刘 同学，达403次</li>
-        <li>其中，男生平均出校57次，</li>
-        <li>女生平均出校77次</li>
+        <li>扫码出校最多为 刘 同学，达<span class="numBlueHighlight">403</span>次</li>
+        <li>其中，男生平均出校<span class="numBlueHighlight">58</span>次，</li>
+        <li>女生平均出校<span class="numBlueHighlight">85</span>次</li>
     </ul>
   </Common>
 </template>
@@ -27,7 +27,7 @@
 <script setup>
 import Common from "../components/common.vue";
 import request from "../request"
-const {data:{dkcs,smcxcs,smrxcs}}=await  request("/myterm/epidemic",{})
+const {data:{dkcs=false,smcxcs,smrxcs}}=await  request("/myterm/epidemic",{})
 </script>
 
 <style scoped>
