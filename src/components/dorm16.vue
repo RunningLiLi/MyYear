@@ -5,19 +5,19 @@
     title="你与寝室"
     resource="数据来源：学生处"
   >
-    <ul v-if="ssmc">
+    <ul v-if="ssmc&&rychmc">
       <li>你所在<span class="numBlueHighlight">{{ssmc}}</span></li>
-      <li>被评为<span class="numBlueHighlight">五星文明寝室</span></li>
+      <li>被评为<span class="numBlueHighlight">{{rychmc}}</span></li>
       <li>近一年宿舍用电<span class="numBlueHighlight">{{ssydzl}}</span></li>
       <li>全校女生寝室平均用电<span class="numBlueHighlight">1000度</span></li>
       <li>全校男生寝室平均用电<span class="numBlueHighlight">3243度</span></li>
       <li>节约用电，人人有责</li>
     </ul>
-    <ul v-else-if="false">
-      <li>这一学年，你住在宁静苑3舍 601</li>
-      <li>近一年宿舍用电1890度</li>
-      <li>全校女生寝室平均用电1000度</li>
-      <li>全校男生寝室平均用电3243度</li>
+    <ul v-else-if="ssmc">
+      <li>你所在<span class="numBlueHighlight">{{ssmc}}</span></li>
+      <li>近一年宿舍用电<span class="numBlueHighlight">{{ssydzl}}</span></li>
+      <li>全校女生寝室平均用电<span class="numBlueHighlight">1000度</span></li>
+      <li>全校男生寝室平均用电<span class="numBlueHighlight">3243度</span></li>
       <li>节约用电，人人有责</li>
     </ul>
      <ul v-else>
@@ -33,7 +33,7 @@
 import { reactive } from "@vue/reactivity";
 import Common from "./common.vue";
 import request from "../request"
-const {data:{ssmc=0,ssdm,ssydzl}=0}=await  request("/myterm/electricity",{})
+const {data:{ssmc=0,ssdm,ssydzl,rychmc}=0}=await  request("/myterm/electricity",{})
 </script>
 
 <style scoped>

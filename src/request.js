@@ -1,6 +1,6 @@
 export default function (path, header) {
   const token=window.location.search.replace("?token=","")
-  const baseUrl="http://172.20.2.60:80";
+  const baseUrl="http://localhost:8080";
   return fetch(baseUrl+path, {
     method:"GET",
     headers: {
