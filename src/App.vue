@@ -1,4 +1,5 @@
 <template>
+<Suspense>
   <swiper :direction="'vertical'" :modules="modules" class="mySwiper">
     <swiper-slide><index1 /></swiper-slide>
     <swiper-slide><Transiton /></swiper-slide>
@@ -18,6 +19,7 @@
     <swiper-slide><Dorm/></swiper-slide>
     <swiper-slide><Forecast/></swiper-slide>
   </swiper>
+</Suspense>
 </template>
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
