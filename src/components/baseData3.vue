@@ -8,7 +8,7 @@
                 <li>你在<span class="collageHighlight" style="color:yellow">{{xy}}{{bj}}</span>班</li>
                 <li>有<span class="numHighlight" style="color:yellow">{{bjrs}}</span>个小伙伴和你一起</li>
                 <li>导员是<span style="color:yellow">{{fdy}}</span></li>
-                <li>全校和你同一天生日的有<span style="color:yellow" class="numHighlight">{{tytr}}</span>人</li>
+                <li v-if="tytr">全校和你同一天生日的有<span style="color:yellow" class="numHighlight">{{tytr}}</span>人</li>
             </ul>
         </div>
         <div class="idContainer">
