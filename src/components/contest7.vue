@@ -27,9 +27,10 @@
 </template>
 
 <script setup>
+
 import Common from "../components/common.vue";
 import request from "../request"
-const {data:{ssmc,ssdj,hjdj}}=await  request("/myterm/competition",{})
+const {data:{ssmc,ssdj,hjdj}={}}=await  request("/myterm/competition",{})
 </script>
 
 <style scoped>

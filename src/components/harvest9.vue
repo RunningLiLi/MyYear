@@ -33,7 +33,6 @@
       <li>奖助学金中，男生占<span class="numBlueHighlight">60%</span></li>
       <li>女生占<span class="numBlueHighlight">40%</span></li>
     </ul>
-    
     <ul v-if="jz[0]">
         <li>&lt;奖助学金&gt;</li>
         <li v-if="jz[0]">同时，你获得了</li>
