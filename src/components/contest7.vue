@@ -7,8 +7,14 @@
     resource="数据来源：教务处"
   >
     <ul>
-      <li v-if="ssmc">你参加了<span class="blueHighlight" style="white-space:pre-wrap;">{{ssmc}}({{ssdj}})</span>，
-          获得了<span class="numBlueHighlight">{{hjdj}}</span>
+     <li v-if="data[0]">你参加了
+        <span 
+        class="blueHighlight" style="white-space:pre-wrap;"
+        v-for="({ssmc,ssdj,hjdj},key) in data.slice(0,3)"
+        :key="key"
+        >
+        {{ssmc}}({{ssdj}})，获得了<span class="numBlueHighlight">{{hjdj}}</span> 
+        </span>
       </li>
       <li v-else>在<span class="numBlueHighlight">2021-2022</span>学年
       </li>
@@ -30,7 +36,7 @@
 
 import Common from "../components/common.vue";
 import request from "../request"
-const {data:{ssmc,ssdj,hjdj}={}}=await  request("/myterm/competition",{})
+const {data=[]}=await  request("/myterm/competition",{})
 </script>
 
 <style scoped>

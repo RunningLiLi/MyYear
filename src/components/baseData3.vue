@@ -21,6 +21,7 @@
 
 <script setup>
 import request from "../request"
+
 const {data:{xy,bj,bjrs,fdy,tytr,xh}}=await  request("/myterm/information",{})
 </script>
 
