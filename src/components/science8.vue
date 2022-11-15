@@ -43,6 +43,7 @@ ul {
   padding-bottom:2.5vh;
 }
 li {
+  color: rgb(221, 140, 34);
   line-height: 4vh;
   color: rgb(80, 80, 80);
   text-align: start;

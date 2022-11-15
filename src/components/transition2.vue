@@ -2,7 +2,7 @@
   <div class="container">
     <ul>
       <li>欢迎</li>
-      <li>{{data.data.xm}}</li>
+      <li>{{data.data.xm||"重小邮"}}</li>
       <li>同学开启你的成长档案</li>
     </ul>
   </div>
