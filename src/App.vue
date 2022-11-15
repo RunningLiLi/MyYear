@@ -3,7 +3,7 @@
   <swiper :direction="'vertical'" :modules="modules" class="mySwiper">
     <swiper-slide><index1 /></swiper-slide>
     <swiper-slide><Transiton /></swiper-slide>
-    <swiper-slide><BaseData /></swiper-slide>
+    <swiper-slide v-if="fdy"><BaseData /></swiper-slide>
     <swiper-slide><Epidemic /></swiper-slide>
     <swiper-slide><Library /></swiper-slide
     ><swiper-slide><Library2 /></swiper-slide>
@@ -44,4 +44,5 @@ import Physical from "./components/physical14.vue";
 import Internetl from "./components/internet15.vue";
 import Dorm from "./components/dorm16.vue";
 import Forecast from "./components/forecast17.vue";
+const {data:{xy,bj,bjrs,fdy,tytr,xh}}=await  request("/myterm/information",{})
 </script>
